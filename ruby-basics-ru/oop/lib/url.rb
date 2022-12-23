@@ -7,7 +7,9 @@ require 'forwardable'
 class Url
   extend Forwardable
   include Comparable
+
   attr_accessor :url
+
   def_delegators :@uri_service, :scheme, :host
 
   def initialize(current_url)
