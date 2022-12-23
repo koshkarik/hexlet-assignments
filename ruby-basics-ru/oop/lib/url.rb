@@ -23,7 +23,6 @@ class Url
     return @params if @params
 
     string_params = @uri_service.query
-    @params = {}
 
     return @params unless string_params
 
