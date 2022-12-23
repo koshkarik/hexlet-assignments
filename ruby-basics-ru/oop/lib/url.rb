@@ -8,6 +8,7 @@ class Url
   extend Forwardable
   include Comparable
   attr_accessor :url
+  def_delegators :@uri_service, :scheme, :host
 
   def initialize(current_url)
     @uri_service = URI(current_url)
@@ -40,7 +41,5 @@ class Url
 
     cur_params[key]
   end
-
-  def_delegators :@uri_service, :scheme, :host
 end
 # END
