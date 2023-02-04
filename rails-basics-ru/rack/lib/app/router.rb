@@ -7,11 +7,11 @@ class Router
     # BEGIN
     case env['PATH_INFO']
     when '/'
-      [200, { 'Content-Type': 'text/plain' }, ['Hello, World!']]
+      [200, { 'Content-Type' => 'text/plain' }, ['Hello, World!']]
     when '/about'
-      [200, { 'Content-Type': 'text/plain' }, ['About!']]
+      [200, { 'Content-Type' => 'text/plain' }, ['About page']]
     else
-      [404, { 'Content-Type': 'text/plain' }, ['Not found']]
+      [404, { 'Content-Type' => 'text/plain' }, ['404 Not Found']]
     end
     # END
   end

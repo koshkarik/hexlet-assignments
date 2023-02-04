@@ -6,9 +6,9 @@ class AdminPolicy
   end
 
   def call(env)
-    case env['PATH_INFO']
-    when '/admin'
-      [403, {}, '']
+    path = env['PATH_INFO']
+    if path =~ %r{\A/admin}
+      [403, { 'Content-Type' => 'text/plain' }, []]
     else
       @app.call env
     end
