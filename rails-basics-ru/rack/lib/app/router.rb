@@ -9,7 +9,7 @@ class Router
     when '/'
       [200, { 'Content-Type': 'text/plain' }, ['Hello, World!']]
     when '/about'
-      [200, { 'Content-Type': 'text/plain' }, ['Hello, World!']]
+      [200, { 'Content-Type': 'text/plain' }, ['About!']]
     else
       [404, { 'Content-Type': 'text/plain' }, ['Not found']]
     end
