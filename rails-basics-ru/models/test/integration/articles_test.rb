@@ -14,6 +14,7 @@ class ArticlesTest < ActionDispatch::IntegrationTest
   end
 
   test 'visiting article page' do
+    puts @article
     get article_url(@article)
 
     assert_response :success
