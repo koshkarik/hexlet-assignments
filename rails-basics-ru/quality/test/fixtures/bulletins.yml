@@ -1,0 +1,11 @@
+
+
+bulletin1:
+  id: 1
+  title: 'First'
+  body: 'First body here'
+
+bulletin2:
+  id: 2
+  title: 'Second'
+  body: 'Second body here'
