@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # Кастомные страницы для ошибок
   # Также изменяем в config/application.rb конфиг
