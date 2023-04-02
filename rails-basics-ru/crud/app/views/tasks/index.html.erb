@@ -1,0 +1,8 @@
+<h1>Tasks changed</h1>
+
+<a href="<%= new_task_path %>">Create new task</a>
+
+<% @tasks.each do |task|%>
+  <h3><a href="<%= task_path(task) %>"><%= task.name %></a></h3>
+  <p><%= task.description %></p>
+<% end %>

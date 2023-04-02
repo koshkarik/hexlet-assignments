@@ -1,0 +1,19 @@
+    <h1>Edit task</h1>
+    <%= form_with model: @task do |f| %>
+        <div>
+            <%= f.label :name, 'Task Name:' %>
+            <%= f.text_field :name, required: true %>
+        </div><br>
+
+        <div>
+            <%= f.label :description, 'Task Description:' %><br>
+            <%= f.text_area :description, rows: 4, cols: 50, required: true %>
+        </div><br>
+
+        <div>
+            <%= f.label :creator, 'Author:' %>
+            <%= f.text_field :creator, required: true %>
+        </div><br>
+
+        <%= f.submit 'Update' %>
+        <% end %>
