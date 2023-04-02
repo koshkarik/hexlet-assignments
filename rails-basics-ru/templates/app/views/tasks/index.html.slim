@@ -1,0 +1,13 @@
+h1
+  | Tasks changed
+|  <a href="
+= new_task_path
+| ">Create new task
+- @tasks.each do |task|
+  h3
+    | <a href="
+    = task_path(task)
+    | ">
+    = task.name
+  p
+    = task.description
