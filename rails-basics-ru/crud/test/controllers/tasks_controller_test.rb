@@ -3,7 +3,8 @@
 require 'test_helper'
 
 class TasksControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'test opens all tasks page' do
+    get '/tasks'
+    assert_response :success
+  end
 end
